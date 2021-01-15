@@ -12,3 +12,18 @@ jobs:
                         -uses: actions/checkout@v2
                         -name: afisare Nume
                          run: echo "Florian Silviu"
+                        -name: executabil
+                         make: program
+                        -name: verificare program
+                         ls: -l demo*
+                        -name: test1
+                         run: ./program 1 2
+                        -name: test2
+                         run: ./program 1000000 99999999
+                        -name: test3
+                         run: ./program 555 -111111
+                        -name: test4
+                         run: ./program -234567 -5433
+                        -name: test5
+                         run: ./program 552225 18765431
+                      
