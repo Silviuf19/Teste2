@@ -1,9 +1,10 @@
-name: Python package
+name: teste
 
 on: [push]
 
 jobs:
         build:
+    
                 runs-on: ubuntu-latest
                 strategy:
                         matrix:
@@ -13,9 +14,9 @@ jobs:
                         -name: afisare Nume
                          run: echo "Florian Silviu"
                         -name: executabil
-                         make: program
+                         run: make program
                         -name: verificare program
-                         ls: -l demo*
+                         run: ls -l demo*
                         -name: test1
                          run: ./program 1 2
                         -name: test2
@@ -25,4 +26,4 @@ jobs:
                         -name: test4
                          run: ./program -234567 -5433
                         -name: test5
-                         run: ./program 552225 18765431                         
+                         run: ./program 552225 18765431
