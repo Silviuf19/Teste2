@@ -17,8 +17,6 @@ jobs:
                           run: make program
                         - name: verificare program
                           run: ls -l program*
-                        - name: test1
-                          run: if[ $("./program 1 2") -eq 5 ] then exit(1) fi
                         - name: test2
                           run: ./program 1000000 99999999
                         - name: test3
