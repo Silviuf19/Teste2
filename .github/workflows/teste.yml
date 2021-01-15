@@ -1,0 +1,14 @@
+name: Python package
+
+on: [push]
+
+jobs:
+        build:
+                runs-on: ubuntu-latest
+                strategy:
+                        matrix:
+                                compiler: [gcc]
+                steps:
+                        -uses: actions/checkout@v2
+                        -name: afisare Nume
+                         run: echo "Florian Silviu"
