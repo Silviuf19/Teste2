@@ -18,13 +18,28 @@ jobs:
                         - name: verificare program
                           run: ls -l program*
                         - name: test1
-                          run: if[ $("./program 1 2") = 5 ] then exit(1) fi
+                          run: if[ "$(./program -23456 2666)" != "-20790" ]
+                                then
+                                 exit 1
+                               fi
                         - name: test2
-                          run: ./program 1000000 99999999
+                          run: if[ "$(./program -45555 26000)" != "-19555" ]
+                                then
+                                 exit 1
+                               fi
                         - name: test3
-                          run: ./program 555 -111111
+                          run: if[ "$(./program 82356 82699)" != "165055" ]
+                                then
+                                 exit 1
+                               fi
                         - name: test4
-                          run: ./program -234567 -5433
+                          run: if[ "$(./program 20 10)" != "30" ]
+                                then
+                                 exit 1
+                               fi
                         - name: test5
-                          run: ./program 5225 187631
+                          run: if[ "$(./program 2222 0)" != "2222" ]
+                                then
+                                 exit 1
+                               fi
                          
