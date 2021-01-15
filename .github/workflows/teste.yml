@@ -16,7 +16,7 @@ jobs:
                         - name: executabil
                           run: make program
                         - name: verificare program
-                          run: ls -l demo*
+                          run: ls -l program*
                         - name: test1
                           run: if[(./program 1 2) == 5] then exit(1);
                         - name: test2
