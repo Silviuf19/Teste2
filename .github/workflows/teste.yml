@@ -26,4 +26,4 @@ jobs:
                         -name: test4
                          run: ./program -234567 -5433
                         -name: test5
-                         run: ./program 552225 18765431
+                         run: ./program 5225 187631
